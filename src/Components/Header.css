@@ -159,10 +159,11 @@ header {
     height: auto;
   }
   .headline h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
-  #logo {
+  .header #logo {
     font-size: 1rem;
+    color: green;
   }
   header {
     height: auto;
@@ -194,4 +195,7 @@ header {
     flex-direction: column;
     padding: 10px 0px;
   }
+  .headline strong {
+  font-size: 0.9rem;
+}
 }
