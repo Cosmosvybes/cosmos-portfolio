@@ -114,6 +114,7 @@ header {
   }
   .header {
     display: sticker;
+    background-color: lightgrey;
   }
   header {
     /* background-color: green;
