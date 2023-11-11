@@ -38,7 +38,7 @@ header {
 }
 .headline h1 {
   font-size: 4rem;
-  color: lightgrey;
+  color: grey;
 }
 .headline p {
   color: black;
@@ -111,6 +111,7 @@ header {
     height: 4rem;
     position: sticky;
     top: 0;
+    background-color: lightgrey;
   }
   .header {
     display: sticker;
@@ -197,6 +198,6 @@ header {
     padding: 10px 0px;
   }
   .headline strong {
-  font-size: 0.9rem;
-}
+    font-size: 0.9rem;
+  }
 }
