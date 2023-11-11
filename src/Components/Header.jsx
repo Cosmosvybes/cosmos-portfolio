@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import "./Header.css";
 import { Button, Link } from "react-scroll";
 import { gsap } from "gsap";
+import About from "./About";
 
 const Header = () => {
- 
-    useEffect(() => {
+  useEffect(() => {
     const timeLine = gsap.timeline({ defaults: { duration: 1 } });
     timeLine.fromTo(
       ".h1",
@@ -18,8 +18,7 @@ const Header = () => {
       { x: "+=10", opacity: 1, ease: "elastic" }
     );
     timeLine.fromTo("p", { scale: 0 }, { scale: 1 });
-    }, []);
-    
+  }, []);
 
   return (
     <>
@@ -52,8 +51,8 @@ const Header = () => {
           Hey there, you're welcome to my world of web web development wonders!
         </p>
         <Button> Get in touch</Button>
- 
       </section>
+      <About />
     </>
   );
 };

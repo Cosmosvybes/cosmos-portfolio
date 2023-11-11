@@ -6,8 +6,11 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  color: lightgrey;
+  color: green;
   padding: 0px 3px;
+  border-bottom: 2px solid green;
+  box-shadow: 4px 0px 0px 0px green;
+  z-index: 1;
 }
 .header span {
   display: flex;
