@@ -178,6 +178,10 @@ header {
     align-items: flex-start;
     /* border-bottom: 1px solid lightgray; */
   }
+  .headline h1 {
+  font-size: 4rem;
+  color: grey;
+}
   .headline p {
     font-size: 0.9rem;
   }

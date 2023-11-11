@@ -84,7 +84,7 @@ const Header = () => {
       <section className="headline">
         <p> Hello my name is, </p>
 
-        <h1 className>
+        <h1>
           cosmos <span style={{ color: "green" }}> ayo </span>{" "}
         </h1>
         <p>
