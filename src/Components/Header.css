@@ -132,13 +132,13 @@ header {
     right: 0;
     top: 0;
     height: 200px;
-    width: 40px;
+    width: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0px;
     border: 1px solid green;
-    border-radius: 5px;
+    
     background-color: green;
     color: lightgray;
   }
@@ -179,7 +179,7 @@ header {
     /* border-bottom: 1px solid lightgray; */
   }
   .headline h1 {
-  font-size: 1rem;
+  font-size: 1.8rem;
   color: grey;
 }
   .headline p {
