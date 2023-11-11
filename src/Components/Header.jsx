@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Header.css";
 import { Button, Link } from "react-scroll";
 import { gsap } from "gsap";
@@ -7,7 +7,14 @@ import reactLogo from "../assets/react.png";
 import mongoDb from "../assets/mongodb.png";
 import mysql from "../assets/msql.jfif";
 import expressLogo from "../assets/express_js_logo.png";
-import { FaList } from "react-icons/fa";
+import {
+  FaTimes,
+  FaEllipsisV,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaFacebook,
+} from "react-icons/fa";
 import git from "../assets/git.png";
 const Header = () => {
   useEffect(() => {
@@ -24,6 +31,10 @@ const Header = () => {
     );
     // timeLine.fromTo("p", { scale: 0 }, { scale: 1 });
   }, []);
+  const [menuOpenStatus, setMenuStatus] = useState(false);
+  const handleMenu = () => {
+    setMenuStatus(!menuOpenStatus);
+  };
 
   return (
     <>
@@ -54,6 +65,19 @@ const Header = () => {
             view cv
           </Link>
         </span>
+      </header>
+
+      <header className="header tab">
+        <h1 id="logo"> cosmos </h1>
+        {!menuOpenStatus && <FaEllipsisV onClick={handleMenu} />}
+        {menuOpenStatus && (
+          <div className="menu">
+            <FaTimes className="icon-item" onClick={handleMenu} />
+            <FaGithub className="icon-item" />
+            <FaTwitter className="icon-item" />
+            <FaFacebook className="icon-item" />
+          </div>
+        )}
       </header>
 
       <section className="headline">
