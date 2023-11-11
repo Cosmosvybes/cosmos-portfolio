@@ -71,7 +71,7 @@ header {
   height: 300px;
   display: grid;
   margin-top: 50px;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(2, 300px);
   grid-gap: 1rem;
 }
 .tab {
@@ -113,7 +113,7 @@ header {
     top: 0;
   }
   .header {
-    display: sti;
+    display: sticker;
   }
   header {
     /* background-color: green;

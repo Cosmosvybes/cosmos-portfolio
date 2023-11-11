@@ -65,7 +65,8 @@ const Header = () => {
             view cv
           </Link>
         </span>
-      </header>
+          </header>
+          
 
       <header className="header tab">
         <h1 id="logo"> cosmos </h1>
