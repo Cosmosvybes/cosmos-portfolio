@@ -1,0 +1,77 @@
+header {
+  height: 100px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: lightgrey;
+  padding: 0px 3px;
+}
+.header span {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+}
+.header #logo {
+  color: lightgreen;
+}
+#nav-bar:hover,
+#nav-bar:focus {
+  border-bottom: 1px solid lightgrey;
+  transition: 0.9s;
+  cursor: pointer;
+  color: lightgreen;
+}
+
+.headline {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 0px 3px;
+  flex-direction: column;
+}
+.headline h1 {
+  font-size: 2.5rem;
+  color: lightgrey;
+}
+.headline p {
+  color: lightgrey;
+  text-align: center;
+}
+.headline button {
+  padding: 10px 10px;
+  margin-top: 5px;
+  background-color: green;
+  color: lightgrey;
+  border-radius: 5px;
+  border: none;
+  font-size: bold;
+  width: 200px;
+}
+.headline button:hover {
+  background-color: lightgreen;
+  color: black;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 650px) {
+  .header span {
+    display: none;
+  }
+  .headline {
+    height: 250px;
+  }
+  .headline h1 {
+    font-size: 1rem;
+  }
+  #logo {
+    font-size: 1rem;
+  }
+  header {
+    height: 50px;
+  }
+}
