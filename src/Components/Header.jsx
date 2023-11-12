@@ -1,39 +1,43 @@
 import { useEffect, useRef, useState } from "react";
 import "./Header.css";
-import { Button, Link } from "react-scroll";
-import { gsap } from "gsap";
+import { Link } from "react-scroll";
+// import { gsap } from "gsap";
 import javascriptlogo from "../assets/JavaScript_Logo.png";
 import reactLogo from "../assets/react.png";
 import mongoDb from "../assets/mongodb.png";
 import mysql from "../assets/msql.jfif";
 import expressLogo from "../assets/express_js_logo.png";
 import {
-  FaTimes,
-  FaEllipsisV,
   FaGithub,
   FaLinkedin,
   FaTwitter,
   FaFacebook,
+  FaPaperPlane,
+  FaArrowRight,
 } from "react-icons/fa";
 import git from "../assets/git.png";
+
 const Header = () => {
-  useEffect(() => {
-    const timeLine = gsap.timeline({ defaults: { duration: 1 } });
-    timeLine.fromTo(
-      ".h1",
-      { x: "+=10", opacity: 0 },
-      { x: "-=10", opacity: 1, ease: "elastic" }
-    );
-    timeLine.fromTo(
-      ".second-h1",
-      { x: "-=10", opacity: 0 },
-      { x: "+=10", opacity: 1, ease: "elastic" }
-    );
-    // timeLine.fromTo("p", { scale: 0 }, { scale: 1 });
-  }, []);
+  //   useEffect(() => {
+  //     const timeLine = gsap.timeline({ defaults: { duration: 1 } });
+  //     timeLine.fromTo(
+  //       ".h1",
+  //       { x: "+=10", opacity: 0 },
+  //       { x: "-=10", opacity: 1, ease: "elastic" }
+  //     );
+  //     timeLine.fromTo(
+  //       ".second-h1",
+  //       { x: "-=10", opacity: 0 },
+  //       { x: "+=10", opacity: 1, ease: "elastic" }
+  //     );
+  //     // timeLine.fromTo("p", { scale: 0 }, { scale: 1 });
+  //   }, []);
+
   const [menuOpenStatus, setMenuStatus] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const handleMenu = () => {
-    setMenuStatus(!menuOpenStatus);
+    setMenuStatus(true);
+    setShowMenu(true);
   };
 
   return (
@@ -42,46 +46,74 @@ const Header = () => {
         <h1 id="logo"> cosmos</h1>
 
         <span>
-          <Link id="nav-bar" to="/home">
+          <Link id="nav-bar" to={"projects"} smooth={true} duration={800}>
             Projects
           </Link>
-          <Link id="nav-bar" to="/home">
+          <Link id="nav-bar" to={"projects"}>
             Media
           </Link>
-          <Link id="nav-bar" to="/home">
+          <Link id="nav-bar" to={"projects"}>
             Contact
           </Link>
 
           <Link
             id="nav-bar"
-            to="/home"
+            to={"projects"}
             style={{
-              background: "lightgrey",
+              background: "green",
               padding: "0px 10px",
               borderRadius: "4px",
-              color: "green",
+              color: "lightgrey",
+              border: "1px solid green",
             }}
           >
             view cv
           </Link>
         </span>
-          </header>
-          
-
+      </header>
       <header className="header tab">
         <h1 id="logo"> cosmos </h1>
-        {!menuOpenStatus && <FaEllipsisV onClick={handleMenu} />}
-        {menuOpenStatus && (
-          <div className="menu">
-            <FaTimes className="icon-item" onClick={handleMenu} />
-            <FaGithub className="icon-item" />
-            <FaTwitter className="icon-item" />
-            <FaFacebook className="icon-item" />
-          </div>
-        )}
-      </header>
+        {!menuOpenStatus && <FaPaperPlane onClick={handleMenu} />}
+        <div className="menu">
+          <hr style={{ color: "green" }} />
+          <FaGithub className="icon-item" />
+          <FaTwitter className="icon-item" />
+          <FaFacebook className="icon-item" />
+          <FaLinkedin className="icon-item" />
+        </div>
 
-      <section className="headline">
+        <div className="dropdown" style={{ width: showMenu && "100px" }}>
+          <Link
+            to={"projects"}
+            className="nav-bars"
+            smooth={true}
+            duration={800}
+          >
+            Projects
+          </Link>
+          <Link
+            id="projects"
+            className="nav-bars"
+            to={"projects"}
+            smooth={true}
+            duration={800}
+          >
+            Media
+          </Link>
+          <Link
+            id="projects"
+            className="nav-bars"
+            to={"projects"}
+            smooth={true}
+            duration={800}
+          >
+            Contact
+          </Link>
+          <FaArrowRight className="icon-item" onClick={handleMenu} />
+        </div>
+      </header>
+      
+      <section className="headline" id="headline">
         <p> Hello my name is, </p>
 
         <h1>
@@ -144,8 +176,6 @@ const Header = () => {
 
         {/* <Button> VIEW CV </Button> */}
       </section>
-
-      <section style={{ height: "400px", marginTop: "10px" }}></section>
     </>
   );
 };
