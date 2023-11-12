@@ -14,6 +14,7 @@ import {
   FaFacebook,
   FaPaperPlane,
   FaArrowRight,
+  FaUserCircle,
 } from "react-icons/fa";
 import git from "../assets/git.png";
 
@@ -83,7 +84,7 @@ const Header = () => {
       </header>
       <header className="header tab">
         <h1 id="logo"> cosmos </h1>
-        {!menuOpenStatus && <FaPaperPlane onClick={handleMenu} />}
+        {!menuOpenStatus && <FaUserCircle onClick={handleMenu} style={{fontSize:"23px"}} />}
         <div className="menu">
           <hr style={{ color: "green" }} />
           <FaGithub className="icon-item" />
