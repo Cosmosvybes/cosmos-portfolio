@@ -20,10 +20,10 @@ header {
 .header #logo {
   color: green;
   font-size: 1rem;
- 
+
   text-decoration: underline;
 }
-#nav-bar{
+#nav-bar {
   border-bottom: 1px dotted green;
 }
 #nav-bar:hover,
@@ -161,7 +161,6 @@ header {
     overflow-x: hidden;
 
     display: flex;
-    padding: 10px 0px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -172,6 +171,7 @@ header {
     font-size: 16px;
     color: black;
     font-weight: bolder;
+    margin-top: 0.7rem;
   }
   .nav-bars:hover {
     border-bottom: 1px solid green;

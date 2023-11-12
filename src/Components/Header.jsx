@@ -92,7 +92,10 @@ const Header = () => {
           <FaLinkedin className="icon-item" />
         </div>
 
-        <div className="dropdown" style={{ width: showMenu && "100px" }}>
+        <div
+          className="dropdown"
+          style={{ width: showMenu && "200px", padding: showMenu && "10px" }}
+        >
           <Link to={"head"} smooth={true} duration={800} className="nav-bars">
             home
           </Link>
@@ -105,7 +108,7 @@ const Header = () => {
             projects
           </Link>
           <Link className="nav-bars" to={"media"} duration={800}>
-            Media
+            media
           </Link>
           <Link className="nav-bars">view cv</Link>
           <Link className="nav-bars">contact</Link>
