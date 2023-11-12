@@ -2,5 +2,12 @@
   height: 500px;
   border: 1px solid green;
   padding: 20px 100px;
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 650px) {
+  .projects-container {
+    padding: 0px 10px;
+    margin-top: 0.5rem;
+    display: flex;
+  }
 }

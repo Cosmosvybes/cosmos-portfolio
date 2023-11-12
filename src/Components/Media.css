@@ -1,0 +1,9 @@
+#media {
+  height: 500px;
+  padding: 20px 100px;
+}
+@media screen and (max-width: 650px) {
+  #media {
+    padding: 0px 10px;
+  }
+}

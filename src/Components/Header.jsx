@@ -18,6 +18,13 @@ import {
 import git from "../assets/git.png";
 
 const Header = () => {
+  //   const scrollToTop = () => {
+  //     scrollTo({
+  //       top: 0,
+  //       behavior: "smooth",
+  //     });
+  //   };
+
   //   useEffect(() => {
   //     const timeLine = gsap.timeline({ defaults: { duration: 1 } });
   //     timeLine.fromTo(
@@ -35,9 +42,10 @@ const Header = () => {
 
   const [menuOpenStatus, setMenuStatus] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+
   const handleMenu = () => {
-    setMenuStatus(true);
-    setShowMenu(true);
+    setMenuStatus(!menuOpenStatus);
+    setShowMenu(!showMenu);
   };
 
   return (
@@ -46,16 +54,18 @@ const Header = () => {
         <h1 id="logo"> cosmos</h1>
 
         <span>
-          <Link id="nav-bar" to={"projects"} smooth={true} duration={800}>
+          <Link id="nav-bar" to={"head"} smooth={true} duration={500}>
+            Home
+          </Link>
+          <Link id="nav-bar" to={"project"} smooth={true} duration={500}>
             Projects
           </Link>
-          <Link id="nav-bar" to={"projects"}>
+          <Link id="nav-bar" to={"media"} smooth={true} duration={500}>
             Media
           </Link>
           <Link id="nav-bar" to={"projects"}>
             Contact
           </Link>
-
           <Link
             id="nav-bar"
             to={"projects"}
@@ -83,37 +93,27 @@ const Header = () => {
         </div>
 
         <div className="dropdown" style={{ width: showMenu && "100px" }}>
-          <Link
-            to={"projects"}
-            className="nav-bars"
-            smooth={true}
-            duration={800}
-          >
-            Projects
+          <Link to={"head"} smooth={true} duration={800} className="nav-bars">
+            home
           </Link>
           <Link
-            id="projects"
-            className="nav-bars"
-            to={"projects"}
+            to={"project"}
             smooth={true}
             duration={800}
+            className="nav-bars"
           >
+            projects
+          </Link>
+          <Link className="nav-bars" to={"media"} duration={800}>
             Media
           </Link>
-          <Link
-            id="projects"
-            className="nav-bars"
-            to={"projects"}
-            smooth={true}
-            duration={800}
-          >
-            Contact
-          </Link>
+          <Link className="nav-bars">view cv</Link>
+          <Link className="nav-bars">contact</Link>
           <FaArrowRight className="icon-item" onClick={handleMenu} />
         </div>
       </header>
-      
-      <section className="headline" id="headline">
+
+      <section className="headline" id="head">
         <p> Hello my name is, </p>
 
         <h1>
@@ -173,8 +173,6 @@ const Header = () => {
             <strong> Version control</strong>
           </div>
         </div>
-
-        {/* <Button> VIEW CV </Button> */}
       </section>
     </>
   );
