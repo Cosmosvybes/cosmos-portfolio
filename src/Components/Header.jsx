@@ -95,7 +95,7 @@ const Header = () => {
 
         <div
           className="dropdown"
-          style={{ width: showMenu && "200px", padding: showMenu && "10px" }}
+          style={{ width: showMenu && "150px", padding: showMenu && "10px 10px" }}
         >
           <Link to={"head"} smooth={true} duration={800} className="nav-bars">
             home
