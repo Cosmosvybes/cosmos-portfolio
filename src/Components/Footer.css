@@ -1,6 +1,12 @@
 footer {
   padding: 0px 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+@media screen and (max-width:650px) {
+    /* footer{
+        flex-direction: column;
+    } */
+    
 }

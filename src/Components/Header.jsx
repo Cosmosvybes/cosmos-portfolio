@@ -7,6 +7,7 @@ import reactLogo from "../assets/react.png";
 import mongoDb from "../assets/mongodb.png";
 import mysql from "../assets/msql.jfif";
 import expressLogo from "../assets/express_js_logo.png";
+import logo from '../assets/HatchfulExport-All-9/logo_transparent.png'
 import {
   FaGithub,
   FaLinkedin,
@@ -60,7 +61,7 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <h1 id="logo"> cosmos</h1>
+        <img src={logo} alt="logo" width={"130px"} height={"110px"} />
 
         <span>
           <Link id="nav-bar" to={"head"} smooth={true} duration={500}>
@@ -129,7 +130,7 @@ const Header = () => {
         </div>
       </header>
       <header className="header tab">
-        <h1 id="logo"> cosmos </h1>
+        <img src={logo} alt="logo" width={"130px"} height={"110px"} />
         {!menuOpenStatus && (
           <FaUserCircle onClick={handleMenu} style={{ fontSize: "23px" }} />
         )}
@@ -248,7 +249,6 @@ const Header = () => {
           </div>
         </div>
       </section>
-
     </>
   );
 };

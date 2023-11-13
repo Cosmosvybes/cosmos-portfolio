@@ -171,6 +171,10 @@ textarea {
   left: 0;
   top: 20%;
 }
+.tab button {
+  border: none;
+  background-color: inherit;
+}
 
 @media screen and (max-width: 650px) {
   .tab {
