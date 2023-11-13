@@ -19,7 +19,7 @@ const Projects = () => {
 
         <div className="project-list">
           {[1, 2, 3].map((projects) => (
-            <div className="project-detail">
+            <div className="project-detail" key={`${Math.random()}`}>
               <img src={img} />
               <h1> Oysciety</h1>
               <p>
