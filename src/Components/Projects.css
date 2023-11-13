@@ -30,6 +30,10 @@
   background-color: rgba(0, 0, 0, 0.041);
   padding: 10px 10px;
 }
+.project-detail:hover {
+  background-color: black;
+  transition: 0.5s;
+}
 .project-detail p {
   padding-bottom: 0.5rem;
 }

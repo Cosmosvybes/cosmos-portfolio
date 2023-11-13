@@ -2,6 +2,7 @@ import "./Projects.css";
 import img from "../assets/react.png";
 import { FaGitAlt, FaGithub, FaLink } from "react-icons/fa";
 import { useState } from "react";
+
 const Projects = () => {
   const [categoryFiltered, setFilter] = useState([]);
   const [projects] = useState([

@@ -12,6 +12,65 @@ header {
   z-index: 1;
   padding: 20px 100px;
 }
+.socials {
+  position: absolute;
+  left: 0;
+  top: 200%;
+  border: 1px solid green;
+  width: 50px;
+  height: 120px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  border-top-right-radius: 5px;
+  align-items: center;
+  z-index: 1;
+}
+.contact-me {
+  position: absolute;
+  top: 200%;
+  right: 30%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 0;
+  transition: 0.5s;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+.contact-me input,
+textarea {
+  display: block;
+  width: 300px;
+  border: none;
+  padding: 10px 10px;
+  margin-top: 0.5rem;
+  outline: none;
+}
+.contact-me input:hover {
+  outline: 2px solid green;
+}
+.cancel-contact-me {
+  position: absolute;
+  right: 0;
+  color: red;
+  font-size: 2rem;
+  top: 0;
+}
+/* .contact-me-mobile {
+  position: absolute;
+  height: 200px;
+  width: 320px;
+  border: 1px solid green;
+  top: 150%;
+  padding: 10px 10px;
+
+} */
+
 .header span {
   display: flex;
   justify-content: space-around;
@@ -39,8 +98,8 @@ header {
   display: flex;
   flex-direction: column;
 }
-.headline h1 {
-  font-size: 4rem;
+.headline > h1 {
+  font-size: 2rem;
   color: grey;
 }
 .headline p {
@@ -75,7 +134,7 @@ header {
   display: grid;
   margin-top: 50px;
   padding: 0px 10px;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(3, 300px);
   grid-gap: 0.4rem;
 }
 .tab {
@@ -134,7 +193,7 @@ header {
   .menu {
     position: absolute;
     left: 0;
-    top: 500%;
+    top: 350%;
     height: 180px;
     border-start-end-radius: 5px;
     width: 50px;
@@ -246,5 +305,11 @@ header {
   .tech-stacks {
     grid-template-columns: repeat(2, 18rem);
     gap: 0.4rem;
+  }
+  header {
+    padding: 0px 50px;
+  }
+  .headline {
+    padding: 0px 50px;
   }
 }

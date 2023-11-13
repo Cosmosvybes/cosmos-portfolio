@@ -17,10 +17,13 @@ import {
   FaArrowAltCircleUp,
   FaArrowCircleUp,
   FaHome,
+  FaTimes,
 } from "react-icons/fa";
 import git from "../assets/git.png";
 
+
 const Header = () => {
+  const [contactFormShow, setContactFormShow] = useState(false);
   //   const scrollToTop = () => {
   //     scrollTo({
   //       top: 0,
@@ -50,6 +53,9 @@ const Header = () => {
     setMenuStatus(!menuOpenStatus);
     setShowMenu(!showMenu);
   };
+  const contactMe = () => {
+    setContactFormShow(!contactFormShow);
+  };
 
   return (
     <>
@@ -63,7 +69,7 @@ const Header = () => {
           <Link id="nav-bar" to={"project"} smooth={true} duration={500}>
             Projects
           </Link>
-          <Link id="nav-bar" to={"contact"}>
+          <Link id="nav-bar" to={"contact"} onClick={contactMe}>
             Contact
           </Link>
           <Link
@@ -80,6 +86,47 @@ const Header = () => {
             view cv
           </Link>
         </span>
+        <div className="socials">
+          <FaGithub
+            className="icon-item"
+            onClick={() => window.open("https://github.com/cosmosvybes")}
+          />
+          <FaTwitter
+            className="icon-item"
+            onClick={() => window.open("https://x.com/chris_script_")}
+          />
+          <FaFacebook
+            className="icon-item"
+            onClick={() => window.open("https://facebook.com/adewale.dapson")}
+          />
+          <FaLinkedin
+            className="icon-item"
+            onClick={() => window.open("https://linkedin.com/chris_script_")}
+          />
+        </div>
+        <div
+          className="contact-me"
+          style={{ height: contactFormShow && "400px" }}
+        >
+          {contactFormShow && (
+            <div className="">
+              <h4> Contact me </h4>
+              <form>
+                <input type="text" placeholder="email" />
+                <textarea maxLength={200} placeholder="message" />
+                <input
+                  type="submit"
+                  value="Send message"
+                  style={{ background: "green", color: "white" }}
+                />
+              </form>
+            </div>
+          )}
+
+          {contactFormShow && (
+            <FaTimes className="cancel-contact-me" onClick={contactMe} />
+          )}
+        </div>
       </header>
       <header className="header tab">
         <h1 id="logo"> cosmos </h1>
@@ -133,10 +180,15 @@ const Header = () => {
           </Link>
           <FaArrowRight className="icon-item" onClick={handleMenu} />
         </div>
+        {/* 
+        <div className="contact-me-mobile">
+        
+        </div> */}
       </header>
 
       <section className="headline" id="head">
-        <p> Hello my name is, </p>
+        <h1 style={{ fontSize: "2rem" }}>Hey, welcome!</h1>
+        <p> My name is, </p>
 
         <h1>
           cosmos <span style={{ color: "green" }}> ayo </span>{" "}
@@ -196,6 +248,7 @@ const Header = () => {
           </div>
         </div>
       </section>
+
     </>
   );
 };
