@@ -1,4 +1,4 @@
-import "./Media.css";
+import "./Contact.css";
 const Media = () => {
   return (
     <>
