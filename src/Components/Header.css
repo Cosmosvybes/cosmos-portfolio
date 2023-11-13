@@ -83,14 +83,14 @@ header {
 }
 .stack {
   height: 100px;
-  width: 300px;
+  width: 290px;
   border-radius: 3px;
   display: flex;
   border: 1px solid grey;
   color: green;
   align-items: center;
   justify-content: space-around;
-  padding: 10px 10px;
+  padding: 10px 5px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .stack:hover {
@@ -244,7 +244,7 @@ header {
 }
 @media screen and (max-width: 712px) {
   .tech-stacks {
-    grid-template-columns: repeat(2, 17rem);
-    gap: 0.2rem;
+    grid-template-columns: repeat(2, 18rem);
+    gap: 0.4rem;
   }
 }

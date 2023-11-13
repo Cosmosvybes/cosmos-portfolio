@@ -12,9 +12,11 @@ import {
   FaLinkedin,
   FaTwitter,
   FaFacebook,
-  FaPaperPlane,
   FaArrowRight,
   FaUserCircle,
+  FaArrowAltCircleUp,
+  FaArrowCircleUp,
+  FaHome,
 } from "react-icons/fa";
 import git from "../assets/git.png";
 
@@ -56,13 +58,10 @@ const Header = () => {
 
         <span>
           <Link id="nav-bar" to={"head"} smooth={true} duration={500}>
-            Home
+            home
           </Link>
           <Link id="nav-bar" to={"project"} smooth={true} duration={500}>
             Projects
-          </Link>
-          <Link id="nav-bar" to={"media"} smooth={true} duration={500}>
-            Media
           </Link>
           <Link id="nav-bar" to={"projects"}>
             Contact
@@ -84,21 +83,38 @@ const Header = () => {
       </header>
       <header className="header tab">
         <h1 id="logo"> cosmos </h1>
-        {!menuOpenStatus && <FaUserCircle onClick={handleMenu} style={{fontSize:"23px"}} />}
+        {!menuOpenStatus && (
+          <FaUserCircle onClick={handleMenu} style={{ fontSize: "23px" }} />
+        )}
         <div className="menu">
           <hr style={{ color: "green" }} />
-          <FaGithub className="icon-item" />
-          <FaTwitter className="icon-item" />
-          <FaFacebook className="icon-item" />
-          <FaLinkedin className="icon-item" />
+          <FaGithub
+            className="icon-item"
+            onClick={() => window.open("https://github.com/cosmosvybes")}
+          />
+          <FaTwitter
+            className="icon-item"
+            onClick={() => window.open("https://x.com/chris_script_")}
+          />
+          <FaFacebook
+            className="icon-item"
+            onClick={() => window.open("https://facebook.com/adewale.dapson")}
+          />
+          <FaLinkedin
+            className="icon-item"
+            onClick={() => window.open("https://linkedin.com/chris_script_")}
+          />
         </div>
 
         <div
           className="dropdown"
-          style={{ width: showMenu && "150px", padding: showMenu && "10px 10px" }}
+          style={{
+            width: showMenu && "150px",
+            padding: showMenu && "10px 10px",
+          }}
         >
           <Link to={"head"} smooth={true} duration={800} className="nav-bars">
-            home
+            <FaHome />
           </Link>
           <Link
             to={"project"}
@@ -108,11 +124,13 @@ const Header = () => {
           >
             projects
           </Link>
-          <Link className="nav-bars" to={"media"} duration={800}>
-            media
+
+          <Link className="nav-bars" to="head">
+            view cv
           </Link>
-          <Link className="nav-bars">view cv</Link>
-          <Link className="nav-bars">contact</Link>
+          <Link className="nav-bars" to="head">
+            contact
+          </Link>
           <FaArrowRight className="icon-item" onClick={handleMenu} />
         </div>
       </header>

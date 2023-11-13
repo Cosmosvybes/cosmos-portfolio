@@ -27,10 +27,14 @@
   width: 550px;
   border: 1px solid lightgrey;
   display: block;
-  /* padding: 10px 10px; */
+  background-color: rgba(0, 0, 0, 0.041);
+  padding: 10px 10px;
 }
 .project-detail p {
   padding-bottom: 0.5rem;
+}
+.project-detail h4 {
+  color: green;
 }
 .project-detail img {
   width: 100%;
@@ -63,8 +67,8 @@
   padding: 10px 10px;
   background-color: lightgray;
   color: green;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 @media screen and (max-width: 650px) {
