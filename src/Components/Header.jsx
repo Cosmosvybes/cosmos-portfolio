@@ -63,7 +63,7 @@ const Header = () => {
           <Link id="nav-bar" to={"project"} smooth={true} duration={500}>
             Projects
           </Link>
-          <Link id="nav-bar" to={"projects"}>
+          <Link id="nav-bar" to={"contact"}>
             Contact
           </Link>
           <Link
@@ -128,7 +128,7 @@ const Header = () => {
           <Link className="nav-bars" to="head">
             view cv
           </Link>
-          <Link className="nav-bars" to="head">
+          <Link className="nav-bars" to="contact">
             contact
           </Link>
           <FaArrowRight className="icon-item" onClick={handleMenu} />

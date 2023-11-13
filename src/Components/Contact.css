@@ -1,14 +1,14 @@
-#media {
+#contact {
   height: 500px;
   padding: 20px 100px;
 }
-#media h1 {
+#contact h1 {
   color: lightgrey;
   font-size: 3rem;
   font-weight: 300;
 }
 @media screen and (max-width: 650px) {
-  #media {
+  #contact {
     padding: 0px 100px;
     display: flex;
     flex-direction: column;

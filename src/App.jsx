@@ -1,11 +1,12 @@
 import "./App.css";
-import { Header, Projects } from "./Index";
+import { Header, Projects, Contact } from "./Index";
 
 function App() {
   return (
     <>
       <Header />
       <Projects />
+      <Contact />
     </>
   );
 }
