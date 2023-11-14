@@ -3,6 +3,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: lightgray;
 }
 @media screen and (max-width:650px) {
   footer {
@@ -10,6 +11,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+    background-color: lightgray;
 }
     
 }

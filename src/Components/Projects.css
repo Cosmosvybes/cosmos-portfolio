@@ -1,9 +1,10 @@
 .projects-container {
   height: auto;
   padding: 0px 100px;
-  margin-top: 0.7rem;
+  /* margin-top: 0.7rem; */
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 .projects-container h1 {
   font-size: 3rem;
@@ -103,14 +104,14 @@
     width: auto;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     border-radius: 4px;
   }
   .projects-container {
     padding: 0px 30px;
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
     display: flex;
     justify-content: center;
     align-items: center;
