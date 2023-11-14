@@ -93,7 +93,7 @@ const Header = () => {
           />
           <FaTwitter
             className="icon-item"
-            onClick={() => window.open("https://x.com/chris_script_")}
+            onClick={() => window.open("https://x.com/92XG_cosmos")}
           />
           <FaFacebook
             className="icon-item"
@@ -101,7 +101,9 @@ const Header = () => {
           />
           <FaLinkedin
             className="icon-item"
-            onClick={() => window.open("https://linkedin.com/chris_script_")}
+            onClick={() =>
+              window.open("https://linkedin.com/in/alfred-chris-ayo-52ba64219")
+            }
           />
         </div>
         <div
