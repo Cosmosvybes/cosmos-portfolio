@@ -2,7 +2,11 @@ import "./Projects.css";
 import img from "../assets/react.png";
 import { FaGitAlt, FaGithub, FaLink } from "react-icons/fa";
 import { useState } from "react";
-
+import cellie from "../assets/cellie.png";
+import knowyours from "../assets/knowyours.png";
+import oysciety from "../assets/oysciety.png";
+import scrambeast from "../assets/scrambeast.png";
+import apiLogo from "../assets/Api.jpeg";
 const Projects = () => {
   const [categoryFiltered, setFilter] = useState([]);
   const [projects] = useState([
@@ -14,6 +18,17 @@ const Projects = () => {
       url: "https://oysciety-be.onrender.com",
       repository: "github.com",
       category: "frontend",
+      img: oysciety,
+    },
+    {
+      id: 3,
+      title: "Scrambeast",
+      descripton:
+        "This is simple words scramble game, where player just form new words from the series of alphabet displayed to the screen",
+      url: "https://scrambeast.vercel.app",
+      repository: "github.com",
+      category: "frontend",
+      img: scrambeast,
     },
     {
       id: 2,
@@ -21,17 +36,20 @@ const Projects = () => {
       descripton:
         "This is a simple app for checking the name of network provider of any number in nigeria",
       url: "https://cosmosvybes.github.io/cellie/",
-      repository: "github.com",
+      repository: "https://github.com/cosmosvybes.scrambeast",
       category: "frontend",
+      img: cellie,
     },
+
     {
       id: 5,
       title: "Knowyours app",
       descripton:
         "This is a static application which tells about people personality based on the their star signs",
-      url: "https://knowyours.netlify.app",
+      url: "https://github.com/cosmosvybes/know-yourself-App",
       repository: "github.com",
       category: "frontend",
+      img: knowyours,
     },
     {
       id: 4,
@@ -39,8 +57,9 @@ const Projects = () => {
       descripton: `This is a digital library management API with Authorization & Authentication,
          this api allows library mananger can keep track of the available books, search for books with TITLE , AUTHOR, OR ISBN `,
       url: "",
-      repository: "github.com/cosmosvybes",
+      repository: "https://github.com/cosmosvybes/lbrary-manager",
       category: "backend",
+      img: apiLogo,
     },
     {
       id: 9,
@@ -48,16 +67,9 @@ const Projects = () => {
       descripton:
         "simple create, read, update, and delete web app, built with express and mySql",
       url: "This is simple CRUD app, using, MYSQL &EXPRESS",
-      repository: "github.com",
+      repository: "https://github.com/cosmosvybes/CRUD",
       category: "backend",
-    },
-    {
-      id: 3,
-      title: "Scrambeast",
-      descripton: "",
-      url: "",
-      repository: "github.com",
-      category: "frontend",
+      img: apiLogo,
     },
   ]);
 
@@ -86,7 +98,7 @@ const Projects = () => {
           {categoryFiltered.length < 1
             ? projects.map((project) => (
                 <div className="project-detail" key={project.id}>
-                  <img src={img} />
+                  <img src={project.img} />
                   <div className="links-repo">
                     <FaGithub onClick={() => window.open(project.repository)} />
                     <FaLink onClick={() => window.open(project.url)} />
@@ -97,7 +109,7 @@ const Projects = () => {
               ))
             : categoryFiltered.map((project) => (
                 <div className="project-detail" key={project.id}>
-                  <img src={img} />
+                  <img src={project.img} />
                   <div className="links-repo">
                     <FaGithub onClick={() => window.open(project.repository)} />
                     <FaLink onClick={() => window.open(project.url)} />
