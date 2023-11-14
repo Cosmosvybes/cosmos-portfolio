@@ -7,7 +7,7 @@ import reactLogo from "../assets/react.png";
 import mongoDb from "../assets/mongodb.png";
 import mysql from "../assets/msql.jfif";
 import expressLogo from "../assets/express_js_logo.png";
-import logo from '../assets/HatchfulExport-All-9/logo_transparent.png'
+import logo from "../assets/HatchfulExport-All-9/logo_transparent.png";
 import {
   FaGithub,
   FaLinkedin,
@@ -21,7 +21,6 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import git from "../assets/git.png";
-
 
 const Header = () => {
   const [contactFormShow, setContactFormShow] = useState(false);
@@ -142,7 +141,7 @@ const Header = () => {
           />
           <FaTwitter
             className="icon-item"
-            onClick={() => window.open("https://x.com/chris_script_")}
+            onClick={() => window.open("https://x.com/92XG_cosmos")}
           />
           <FaFacebook
             className="icon-item"
@@ -150,7 +149,9 @@ const Header = () => {
           />
           <FaLinkedin
             className="icon-item"
-            onClick={() => window.open("https://linkedin.com/chris_script_")}
+            onClick={() =>
+              window.open("https://linkedin.com/in/alfred-chris-ayo-52ba64219")
+            }
           />
         </div>
 
