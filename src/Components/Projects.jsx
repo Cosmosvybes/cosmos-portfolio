@@ -16,7 +16,7 @@ const Projects = () => {
       descripton: `This is a Fullstack applicaton for institution information & communication, user can initiate a letter,
          share and discuss with any authorities involved, and share to the general page if needed!  `,
       url: "https://oysciety-be.onrender.com",
-      repository: "github.com",
+      repository: "https://github.com/cosmosvybes/oyscatech",
       category: "frontend",
       img: oysciety,
     },
@@ -26,7 +26,7 @@ const Projects = () => {
       descripton:
         "This is simple words scramble game, where player just form new words from the series of alphabet displayed to the screen",
       url: "https://scrambeast.vercel.app",
-      repository: "github.com",
+      repository: "https://github.com/cosmosvybes/scrambeast",
       category: "frontend",
       img: scrambeast,
     },
@@ -36,7 +36,7 @@ const Projects = () => {
       descripton:
         "This is a simple app for checking the name of network provider of any number in nigeria",
       url: "https://cosmosvybes.github.io/cellie/",
-      repository: "https://github.com/cosmosvybes.scrambeast",
+      repository: "https://github.com/cosmosvybes/cellie",
       category: "frontend",
       img: cellie,
     },
@@ -46,8 +46,8 @@ const Projects = () => {
       title: "Knowyours app",
       descripton:
         "This is a static application which tells about people personality based on the their star signs",
-      url: "https://github.com/cosmosvybes/know-yourself-App",
-      repository: "github.com",
+      url: "https://knowyours.netlify.app",
+      repository: "https://github.com/cosmosvybes/know-yourself-App",
       category: "frontend",
       img: knowyours,
     },
@@ -85,7 +85,7 @@ const Projects = () => {
     <>
       <section id="project" className="projects-container">
         <h1> Projects</h1>
-        <p> Here are my some of the favourite projects, and APIs </p>
+        <p> Here are my some of my favourite projects and APIs </p>
         <div className="btns">
           <button onClick={() => filterByCategory("all")}> All</button>
           <button onClick={() => filterByCategory("frontend")}>
