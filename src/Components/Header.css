@@ -180,7 +180,7 @@ textarea {
   .tab {
     display: flex;
     justify-content: space-between;
-    padding: 0px 50px;
+    padding: 0px 40px;
     height: 4rem;
     position: sticky;
     top: 0;
@@ -189,6 +189,7 @@ textarea {
   .header {
     display: sticker;
     background-color: lightgray;
+
   }
   header {
     display: none;
@@ -257,6 +258,8 @@ textarea {
   }
   .headline {
     height: auto;
+    padding: 0px 10px;
+
   }
   .headline h1 {
     font-size: 1.5rem;
@@ -271,7 +274,7 @@ textarea {
   .headline {
     margin-top: 1rem;
     flex-direction: column;
-    padding: 0px 10px;
+    /* padding: 0px 5px; */
     align-items: flex-start;
     /* border-bottom: 1px solid lightgray; */
   }

@@ -15,8 +15,6 @@ import {
   FaFacebook,
   FaArrowRight,
   FaUserCircle,
-  FaArrowAltCircleUp,
-  FaArrowCircleUp,
   FaHome,
   FaTimes,
 } from "react-icons/fa";
@@ -24,27 +22,8 @@ import git from "../assets/git.png";
 
 const Header = () => {
   const [contactFormShow, setContactFormShow] = useState(false);
-  //   const scrollToTop = () => {
-  //     scrollTo({
-  //       top: 0,
-  //       behavior: "smooth",
-  //     });
-  //   };
+ 
 
-  //   useEffect(() => {
-  //     const timeLine = gsap.timeline({ defaults: { duration: 1 } });
-  //     timeLine.fromTo(
-  //       ".h1",
-  //       { x: "+=10", opacity: 0 },
-  //       { x: "-=10", opacity: 1, ease: "elastic" }
-  //     );
-  //     timeLine.fromTo(
-  //       ".second-h1",
-  //       { x: "-=10", opacity: 0 },
-  //       { x: "+=10", opacity: 1, ease: "elastic" }
-  //     );
-  //     // timeLine.fromTo("p", { scale: 0 }, { scale: 1 });
-  //   }, []);
 
   const [menuOpenStatus, setMenuStatus] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -213,10 +192,9 @@ const Header = () => {
           commercial experience in this era , with a keen interest to expand my
           skillset in a diverse range of technologies!
         </p>
-        <strong style={{ color: "green" }}>
+        <strong style={{ color: "green", fontSize:'1rem' }}>
           {" "}
-          I am open to oppotunities in Nigeria, International and Remote
-          Opportunities.{" "}
+          I am open to oppotunities in Nigeria, international or remote gigs!
         </strong>
 
         <div className="tech-stacks">

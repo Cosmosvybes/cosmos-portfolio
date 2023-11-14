@@ -7,14 +7,17 @@
   color: lightgrey;
   font-size: 1.4rem;
   font-weight: 300;
+  text-align: center;
 }
 @media screen and (max-width: 650px) {
   #contact {
     /* padding: 0px 100px; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+  }
+  #contact h4{
+    text-align: center;
   }
   #contact input,
   textarea {

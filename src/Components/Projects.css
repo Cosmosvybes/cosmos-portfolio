@@ -19,7 +19,7 @@
   width: auto;
   display: grid;
   grid-template-columns: repeat(2, 35rem);
-  grid-gap: 0.2rem;
+  grid-gap: 0.4rem;
   /* padding: 10px 0px; */
 }
 .project-detail {

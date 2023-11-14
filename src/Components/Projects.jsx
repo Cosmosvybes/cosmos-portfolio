@@ -1,12 +1,14 @@
 import "./Projects.css";
 import img from "../assets/react.png";
-import { FaGitAlt, FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 import { useState } from "react";
 import cellie from "../assets/cellie.png";
 import knowyours from "../assets/knowyours.png";
 import oysciety from "../assets/oysciety.png";
 import scrambeast from "../assets/scrambeast.png";
 import apiLogo from "../assets/Api.jpeg";
+import gsap from "gsap";
+
 const Projects = () => {
   const [categoryFiltered, setFilter] = useState([]);
   const [projects] = useState([
@@ -74,6 +76,12 @@ const Projects = () => {
   ]);
 
   const filterByCategory = (category) => {
+    const timeLine = gsap.timeline({ defaults: { duration: 1 } });
+    timeLine.fromTo(
+      ".project-detail",
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, rotate: 720 }
+    );
     setFilter(
       category == "all"
         ? projects
