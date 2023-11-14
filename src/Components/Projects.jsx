@@ -85,7 +85,7 @@ const Projects = () => {
     <>
       <section id="project" className="projects-container">
         <h1> Projects</h1>
-        <p> Here are my some of my favourite projects and APIs </p>
+        <p> Here are some of my favourite projects and APIs </p>
         <div className="btns">
           <button onClick={() => filterByCategory("all")}> All</button>
           <button onClick={() => filterByCategory("frontend")}>
