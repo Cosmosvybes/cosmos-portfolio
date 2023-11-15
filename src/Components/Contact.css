@@ -10,6 +10,15 @@
   font-weight: 300;
   text-align: center;
 }
+#submit {
+  background: lightgrey;
+  color: black;
+}
+#submit:hover {
+  background-color:black;
+  color: lightgrey;
+  transition: 0.5s;
+}
 @media screen and (max-width: 650px) {
   #contact {
     /* padding: 0px 100px; */
@@ -19,7 +28,7 @@
   }
   #contact h4 {
     text-align: center;
-    color: green;
+    color: lightgrey;
   }
   #contact input,
   textarea {
@@ -29,7 +38,7 @@
   }
   textarea,
   input {
-    border: 2px solid green;
+    border: 2px solid grey;
     margin-top: 0.5rem;
     border-radius: 5px;
   }

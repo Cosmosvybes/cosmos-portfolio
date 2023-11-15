@@ -25,9 +25,8 @@ header {
   border-top-right-radius: 5px;
   align-items: center;
   z-index: 1;
-  background-color: green;
-  color: yellow;
- 
+  background-color: lightgrey;
+  color: black;
 }
 .contact-me {
   position: absolute;
@@ -54,7 +53,17 @@ textarea {
   outline: none;
 }
 .contact-me input:hover {
-  outline: 2px solid green;
+  outline: 2px solid black;
+}
+.contact-me #submit {
+  background-color: black;
+  color: lightgrey;
+}
+.contact-me #submit:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.contact-me h4 {
+  color: black;
 }
 .cancel-contact-me {
   position: absolute;
@@ -79,19 +88,20 @@ textarea {
   width: 400px;
 }
 .header #logo {
-  color: green;
+  color: black;
   font-size: 1rem;
   text-decoration: underline;
 }
 #nav-bar {
-  border-bottom: 1px dotted green;
+  border-bottom: 1px dotted black;
+  color: black;
 }
 #nav-bar:hover,
 #nav-bar:focus {
   border-bottom: 1px solid black;
-  transition: 0.9s;
+  transition: 0.5s;
   cursor: pointer;
-  color: black;
+  color: yellow;
 }
 
 .headline {
@@ -150,16 +160,17 @@ textarea {
   border-radius: 3px;
   display: flex;
   border: 1px solid grey;
-  color: green;
+  color: black;
   align-items: center;
   justify-content: space-around;
   padding: 10px 5px;
-  background-color: yellow;
+  background-color: lightgrey;
 }
 .stack:hover {
   background-color: rgba(0, 0, 0, 0.2);
   transition: 0.5s;
-  box-shadow: 0px 2px 3px 0px grey;
+  color: lightgrey;
+  box-shadow: 0px 2px 3px 0px lightgrey;
 }
 .side-Button {
   position: sticky;
@@ -188,7 +199,7 @@ textarea {
     height: 4rem;
     position: sticky;
     top: 0;
-    background-color:black;
+    background-color: black;
   }
   .header {
     display: sticker;
@@ -211,8 +222,8 @@ textarea {
     padding: 10px 5px;
     justify-content: space-between;
     z-index: 1;
-    background-color: green;
-    color: yellow;
+    background-color: lightgray;
+    color: black;
   }
   .dropdown {
     position: absolute;
@@ -237,14 +248,15 @@ textarea {
     margin-top: 0.7rem;
   }
   .nav-bars:hover {
-    border-bottom: 1px solid green;
-    color: green;
+    border-bottom: 1px solid lightgrey;
+    color: lightgrey;
   }
   .icon-item {
     margin-bottom: 0.8rem;
     font-weight: 300;
     font-size: 1.2rem;
     margin-top: 0.5rem;
+    color: black;
   }
   .header #logo {
     color: lightgray;

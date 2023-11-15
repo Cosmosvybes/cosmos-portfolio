@@ -22,8 +22,6 @@ import git from "../assets/git.png";
 
 const Header = () => {
   const [contactFormShow, setContactFormShow] = useState(false);
- 
-
 
   const [menuOpenStatus, setMenuStatus] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -55,8 +53,8 @@ const Header = () => {
             id="nav-bar"
             to={"projects"}
             style={{
-              background: "green",
-              padding: "0px 10px",
+              background: "black",
+              padding: "3px 10px",
               borderRadius: "4px",
               color: "lightgrey",
               border: "1px solid green",
@@ -95,11 +93,7 @@ const Header = () => {
               <form>
                 <input type="text" placeholder="email" />
                 <textarea maxLength={200} placeholder="message" />
-                <input
-                  type="submit"
-                  value="Send message"
-                  style={{ background: "green", color: "white" }}
-                />
+                <input type="submit" value="Send message" id="submit" />
               </form>
             </div>
           )}
@@ -112,7 +106,10 @@ const Header = () => {
       <header className="header tab">
         <img src={logo} alt="logo" width={"130px"} height={"110px"} />
         {!menuOpenStatus && (
-          <FaUserCircle onClick={handleMenu} style={{ fontSize: "23px" }} />
+          <FaUserCircle
+            onClick={handleMenu}
+            style={{ fontSize: "23px", color: "black" }}
+          />
         )}
         <div className="menu">
           <hr style={{ color: "green" }} />
@@ -174,12 +171,12 @@ const Header = () => {
         <p> My name is, </p>
 
         <h1>
-          cosmos <span style={{ color: "green" }}> ayo </span>{" "}
+          cosmos <span style={{ color: "lightgrey" }}> ayo </span>{" "}
         </h1>
         <p>
           {" "}
           I am a{" "}
-          <span style={{ color: "green", fontWeight: "bolder" }}>
+          <span style={{ color: "white", fontWeight: "bolder" }}>
             web developer
           </span>{" "}
           based in nigeria, skilled at crafting websites and web APIs, using
@@ -192,7 +189,7 @@ const Header = () => {
           commercial experience in this era , with a keen interest to expand my
           skillset in a diverse range of technologies!
         </p>
-        <strong style={{ color: "green", fontSize:'1rem' }}>
+        <strong style={{ color: "white", fontSize: "1rem" }}>
           {" "}
           I am open to oppotunities in Nigeria, international or remote gigs!
         </strong>
