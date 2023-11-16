@@ -17,6 +17,7 @@ import {
   FaUserCircle,
   FaHome,
   FaTimes,
+  FaAt,
 } from "react-icons/fa";
 import git from "../assets/git.png";
 
@@ -82,6 +83,12 @@ const Header = () => {
               window.open("https://linkedin.com/in/alfred-chris-ayo-52ba64219")
             }
           />
+          <FaAt
+            className="icon-item"
+            onClick={() => {
+              window.open("mailto:alfredchrisayo@gmail.com");
+            }}
+          />
         </div>
         <div
           className="contact-me"
@@ -130,6 +137,12 @@ const Header = () => {
             onClick={() =>
               window.open("https://linkedin.com/in/alfred-chris-ayo-52ba64219")
             }
+          />
+          <FaAt
+            className="icon-item"
+            onClick={() => {
+              window.open("mailto:alfredchrisayo@gmail.com");
+            }}
           />
         </div>
 
