@@ -17,7 +17,7 @@ header {
   top: 200%;
   border: 1px solid lightgrey;
   width: 50px;
-  height: 120px;
+  height: 150px;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -51,6 +51,7 @@ textarea {
   padding: 10px 10px;
   margin-top: 0.5rem;
   outline: none;
+  color: black;
 }
 .contact-me input:hover {
   outline: 2px solid black;
@@ -253,9 +254,8 @@ textarea {
   }
   .icon-item {
     margin-bottom: 0.8rem;
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+    /* font-weight: 300; */
+    font-size: 1.5rem;
     color: black;
   }
   .header #logo {

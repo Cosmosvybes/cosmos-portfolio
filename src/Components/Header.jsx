@@ -34,6 +34,41 @@ const Header = () => {
   const contactMe = () => {
     setContactFormShow(!contactFormShow);
   };
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [response, setResponse] = useState("");
+
+  const handleContactMe = (e) => {
+    e.preventDefault();
+    if (!email || !message) {
+      return;
+    }
+    const objectData = { email, message };
+    fetch("/api/contact/me/message", {
+      method: "POST",
+      headers: { "Content-Type": "Application/json" },
+      body: JSON.stringify({ ...objectData }),
+    })
+      .then((result) => {
+        if (!result.ok) {
+          throw new Error("operation failed");
+        }
+        return result.json();
+      })
+      .then((response) => {
+        setResponse(response.response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    setEmail("");
+    setMessage("");
+  };
+    useEffect(() => {
+      setTimeout(() => {
+        setResponse("");
+      }, 8000);
+    }, [response]);
 
   return (
     <>
@@ -97,10 +132,28 @@ const Header = () => {
           {contactFormShow && (
             <div className="">
               <h4> Contact me </h4>
-              <form>
-                <input type="text" placeholder="email" />
-                <textarea maxLength={200} placeholder="message" />
+              <form onSubmit={handleContactMe}>
+                <input
+                  type="email"
+                  placeholder="email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+                <textarea
+                  maxLength={200}
+                  placeholder="message"
+                  value={message}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                />
                 <input type="submit" value="Send message" id="submit" />
+                <p style={{ textAlign: "center", paddingTop: "5px" }}>
+                  {" "}
+                  {response}
+                </p>
               </form>
             </div>
           )}
