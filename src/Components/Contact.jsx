@@ -4,6 +4,7 @@ const Media = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [response, setResponse] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const handleContactMe = (e) => {
     e.preventDefault();
@@ -17,24 +18,29 @@ const Media = () => {
       body: JSON.stringify({ ...objectData }),
     })
       .then((result) => {
+        setIsSending(true);
         if (!result.ok) {
-          throw new Error("operation failed");
+          throw new Error({ error: "operation failed" });
         }
         return result.json();
       })
       .then((response) => {
+        setIsSending(false);
         setResponse(response.response);
       })
       .catch((err) => {
-        console.log(err);
+        setIsSending(false);
+        setResponse("operation failed, try again!");
       });
-    setEmail("");
-    setMessage("");
   };
 
+
+  
   useEffect(() => {
     setTimeout(() => {
       setResponse("");
+      setEmail("");
+      setMessage("");
     }, 8000);
   }, [response]);
 
@@ -61,7 +67,7 @@ const Media = () => {
             />
             <input id="submit" type="submit" value="Send message" />
             <p style={{ color: "lightgreen", textAlign: "center" }}>
-              {response}
+              {isSending ? "sending..." : response}
             </p>
           </form>
         </div>
