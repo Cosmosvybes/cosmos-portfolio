@@ -64,11 +64,11 @@ const Header = () => {
     setEmail("");
     setMessage("");
   };
-    useEffect(() => {
-      setTimeout(() => {
-        setResponse("");
-      }, 8000);
-    }, [response]);
+  useEffect(() => {
+    setTimeout(() => {
+      setResponse("");
+    }, 8000);
+  }, [response]);
 
   return (
     <>
@@ -232,7 +232,7 @@ const Header = () => {
         </div> */}
       </header>
 
-      <section className="headline" id="head">
+      <section className="px-24 max-md:px-16 max-sm:px-7 bg-black text-slate-400" id="head">
         <h1 style={{ fontSize: "2rem" }}>Hey, welcome!</h1>
         <p> My name is, </p>
 
@@ -260,34 +260,39 @@ const Header = () => {
           I am open to oppotunities in Nigeria, international or remote gigs!
         </strong>
 
-        <div className="tech-stacks">
-          <div className="stack">
+        <div className="grid grid-cols-2 gap-1 max-sm:grid-cols-2 max-sm:gap-1 py-1">
+          <div className="border border-slate-200 w-50 text-white flex justify-between px-60  items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={javascriptlogo} width={"30px"} height={"30px"} />
             <strong>Javascript</strong>
           </div>
-          <div className="stack">
+          <div className="border border-slate-200 w-50 text-white flex justify-between px-60  items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={reactLogo} width={"30px"} height={"30px"} />
             <strong> React </strong>
           </div>
-          <div className="stack">
-            <img src={expressLogo} width={"120px"} height={"30px"} />
+          <div className="border border-slate-200 w-50 text-white flex justify-between  px-60 items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+            <img
+              src={expressLogo}
+              width={"120px"}
+              height={"30px"}
+              className="max-sm:hidden"
+            />
             <strong>express</strong>
           </div>
 
-          <div className="stack">
+          <div className="border border-slate-200 w-50 text-white flex justify-between px-60 items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={javascriptlogo} width={"30px"} height={"30px"} />
             <strong> Node</strong>
           </div>
 
-          <div className="stack">
+          <div className="border border-slate-200 w-50 text-white flex justify-between px-60  items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={mongoDb} width={"30px"} height={"30px"} />
             <strong> MongoDb</strong>
           </div>
-          <div className="stack">
+          <div className="border border-slate-200 w-50 text-white flex justify-between px-60  items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={mysql} width={"30px"} height={"30px"} />
             <strong> Mysql</strong>
           </div>
-          <div className="stack">
+          <div className="border border-slate-200 w-50 text-white flex justify-between px-60 items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-1">
             <img src={git} width={"70px"} height={"30px"} />
             <strong> Version control</strong>
           </div>

@@ -74,11 +74,13 @@ const Projects = () => {
       img: apiLogo,
     },
   ]);
+  // <FaGithub onClick={() => window.open(project.repository)} />
+  //                   <FaLink onClick={() => window.open(project.url)} />
 
   const filterByCategory = (category) => {
     const timeLine = gsap.timeline({ defaults: { duration: 1 } });
     timeLine.fromTo(
-      ".project-detail",
+      ".detail",
       { scale: 0, opacity: 0 },
       { scale: 1, opacity: 1, rotate: 720 }
     );
@@ -91,9 +93,15 @@ const Projects = () => {
 
   return (
     <>
-      <section id="project" className="projects-container">
+      <section
+        id="project"
+        className=" bg-black px-24 text-white py-4 max-sm:flex justify-center items-center flex-col  max-sm:px-4 text-sm max-md:px-16 "
+      >
         <h1> Projects</h1>
-        <p> Here are some of my favourite projects and APIs </p>
+        <p className="inline">
+          {" "}
+          Here are some of my favourite projects and APIs{" "}
+        </p>
         <div className="btns">
           <button onClick={() => filterByCategory("all")}> All</button>
           <button onClick={() => filterByCategory("frontend")}>
@@ -102,10 +110,14 @@ const Projects = () => {
           <button onClick={() => filterByCategory("backend")}>Back End</button>
         </div>
 
-        <div className="project-list">
+        <div className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
           {categoryFiltered.length < 1
             ? projects.map((project) => (
-                <div className="project-detail" key={project.id}>
+                <div
+                  className="detail h-auto w-86 border border-slate-900 flex justify-between flex-col items-center
+                   px-1 py-2 max-sm:w-auto  hover:bg-slate-800 trasition duration-500"
+                  key={project.id}
+                >
                   <img src={project.img} />
                   <div className="links-repo">
                     <FaGithub onClick={() => window.open(project.repository)} />
@@ -116,7 +128,11 @@ const Projects = () => {
                 </div>
               ))
             : categoryFiltered.map((project) => (
-                <div className="project-detail" key={project.id}>
+                <div
+                  className="detail h-auto w-86 border border-slate-900 
+                  flex justify-between flex-col items-center px-1 py-2 max-sm:w-auto hover:bg-slate-800 trasition duration-500"
+                  key={project.id}
+                >
                   <img src={project.img} />
                   <div className="links-repo">
                     <FaGithub onClick={() => window.open(project.repository)} />
