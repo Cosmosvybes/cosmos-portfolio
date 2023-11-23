@@ -5,17 +5,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: green;
-  box-shadow: 0px 1px 4px 0px grey;
+  color: lightgrey;
+  /* box-shadow: 0px 1px 4px 0px grey; */
   z-index: 1;
   padding: 20px 70px;
   background: lightgrey;
 }
 .socials {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 200%;
-  border: 1px solid lightgrey;
   width: 50px;
   height: 150px;
   justify-content: space-between;
@@ -25,8 +24,7 @@ header {
   border-top-right-radius: 5px;
   align-items: center;
   z-index: 1;
-  background-color: lightgrey;
-  color: black;
+  background-color: rgba(0, 0, 0, 0.083);
 }
 .contact-me {
   position: absolute;
@@ -222,8 +220,7 @@ textarea {
     padding: 10px 5px;
     justify-content: space-between;
     z-index: 1;
-    background-color: lightgray;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.083);
   }
   .dropdown {
     position: absolute;
@@ -254,8 +251,8 @@ textarea {
   .icon-item {
     margin-bottom: 0.8rem;
     /* font-weight: 300; */
-    font-size: 1.5rem;
-    color: black;
+    font-size: 2rem;
+    color: grey;
   }
   .header #logo {
     color: lightgray;

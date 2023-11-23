@@ -61,7 +61,7 @@ const Projects = () => {
       url: "",
       repository: "https://github.com/cosmosvybes/lbrary-manager",
       category: "backend",
-      img: apiLogo,
+      img: oysciety,
     },
     {
       id: 9,
@@ -71,11 +71,9 @@ const Projects = () => {
       url: "This is simple CRUD app, using, MYSQL &EXPRESS",
       repository: "https://github.com/cosmosvybes/CRUD",
       category: "backend",
-      img: apiLogo,
+      img: oysciety,
     },
   ]);
-  // <FaGithub onClick={() => window.open(project.repository)} />
-  //                   <FaLink onClick={() => window.open(project.url)} />
 
   const filterByCategory = (category) => {
     const timeLine = gsap.timeline({ defaults: { duration: 1 } });
@@ -95,7 +93,7 @@ const Projects = () => {
     <>
       <section
         id="project"
-        className=" bg-black px-24 text-white py-4 max-sm:flex justify-center items-center flex-col  max-sm:px-4 text-sm max-md:px-16 "
+        className=" bg-black px-24 text-white py-4 max-sm:flex justify-center items-center flex-col  max-sm:px-4 text-sm max-md:px-16"
       >
         <h1> Projects</h1>
         <p className="inline">
@@ -114,32 +112,65 @@ const Projects = () => {
           {categoryFiltered.length < 1
             ? projects.map((project) => (
                 <div
-                  className="detail h-auto w-86 border border-slate-900 flex justify-between flex-col items-center
-                   px-1 py-2 max-sm:w-auto  hover:bg-slate-800 trasition duration-500"
+                  className="detail h-auto w-95 max-md:w-auto border border-slate-900 flex justify-evenly flex-col items-start
+                   px-1 max-sm:w-auto  hover:bg-slate-300 hover:text-slate-900 trasition duration-500"
                   key={project.id}
                 >
-                  <img src={project.img} />
-                  <div className="links-repo">
-                    <FaGithub onClick={() => window.open(project.repository)} />
-                    <FaLink onClick={() => window.open(project.url)} />
+                  <div className="text h-auto border border-slate-200 py-2 px-2 rounded-sm max-sm:rounded-sm">
+                    <img src={project.img} />
+                    <div className="description flex justify-start">
+                      <div className="h-44 border  border-slate-500 flex flex-col items-center justify-center  ">
+                        <h4 className="text-slate-700 text-2xl hover:text-slate-900">
+                          {" "}
+                          {project.title}
+                        </h4>
+                        <p className="text-slate-500 hover:text-slate-900">
+                          {project.descripton}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <h4> {project.title}</h4>
-                  <p>{project.descripton}</p>
+
+                  <div className="links-url flex justify-around items-center h-12  border border-slate-300 w-full">
+                    <FaGithub
+                      onClick={() => window.open(project.repository)}
+                      className="hover:text-slate-600 transition duration-150 text-slate-500"
+                    />
+                    <FaLink
+                      onClick={() => window.open(project.url)}
+                      className="hover:text-slate-600 transition duration-150 text-slate-500 "
+                    />
+                  </div>
+                  {/* <h4> {project.title}</h4> */}
+                  {/* <p>{project.descripton}</p> */}
                 </div>
               ))
             : categoryFiltered.map((project) => (
                 <div
-                  className="detail h-auto w-86 border border-slate-900 
-                  flex justify-between flex-col items-center px-1 py-2 max-sm:w-auto hover:bg-slate-800 trasition duration-500"
+                  className="detail h-auto w-auto border border-slate-900
+                  flex justify-between hover:text-slate-900 rounded-sm max-sm:rounded-md flex-col items-center px-1  max-sm:w-auto hover:bg-slate-300 trasition duration-500"
                   key={project.id}
                 >
-                  <img src={project.img} />
-                  <div className="links-repo">
-                    <FaGithub onClick={() => window.open(project.repository)} />
-                    <FaLink onClick={() => window.open(project.url)} />
+                  <div className="text h-auto border border-slate-200  px-0 py-0 rounded-md max-sm:rounded-sm">
+                    <img src={project.img} />
                   </div>
-                  <h4> {project.title}</h4>
-                  <p>{project.descripton}</p>
+                  <div className="description h-52 border flex flex-col items-center justify-center border-slate-500">
+                    <h4 className="text-slate-500 hover:text-slate-900">
+                      {" "}
+                      {project.title}
+                    </h4>
+                    <p className="hover:text-slate-900">{project.descripton}</p>
+                  </div>
+                  <div className="links-url flex justify-around items-center h-12  border border-slate-300 w-full">
+                    <FaGithub
+                      onClick={() => window.open(project.repository)}
+                      className="hover:text-slate-600 transition duration-150 text-slate-500"
+                    />
+                    <FaLink
+                      onClick={() => window.open(project.url)}
+                      className="hover:text-slate-600 transition duration-150 text-slate-500"
+                    />
+                  </div>
                 </div>
               ))}
         </div>

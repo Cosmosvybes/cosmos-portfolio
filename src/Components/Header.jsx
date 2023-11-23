@@ -69,6 +69,32 @@ const Header = () => {
       setResponse("");
     }, 8000);
   }, [response]);
+  // time
+  const [time, setTime] = useState("");
+  const [greetings, setGreetings] = useState("");
+
+  const readTime = () => {
+    let hours = new Date().getHours();
+    if (hours >= 16) {
+      setGreetings("Good evening");
+    } else if (hours > 12) {
+      setGreetings("Good Afternoon");
+    } else {
+      setGreetings("Good Morning");
+    }
+    setInterval(() => {
+      setTime(
+        new Date().toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "numeric",
+        })
+      );
+    }, 1000);
+  };
+
+  useEffect(() => {
+    return readTime();
+  }, []);
 
   return (
     <>
@@ -86,15 +112,9 @@ const Header = () => {
             Contact
           </Link>
           <Link
-            id="nav-bar"
+            // id="nav-bar"
             to={"projects"}
-            style={{
-              background: "black",
-              padding: "3px 10px",
-              borderRadius: "4px",
-              color: "lightgrey",
-              border: "1px solid green",
-            }}
+            className="bg-black cursor-pointer text-white px-1 py-0 rounded-sm  max-md:text-white border hover:border-black hover:bg-slate-300 hover:text-black"
           >
             view cv
           </Link>
@@ -162,6 +182,11 @@ const Header = () => {
             <FaTimes className="cancel-contact-me" onClick={contactMe} />
           )}
         </div>
+
+        <div className="absolute left-80 top-5 w-92 border border-slate-300 h-38 flex justify-between flex-reverse items-center transform ">
+          <p className=" text-black text-5xl block">{greetings}👋🏼</p>
+          <strong className=" text-black block ">{time}</strong>
+        </div>
       </header>
       <header className="header tab">
         <img src={logo} alt="logo" width={"130px"} height={"110px"} />
@@ -226,13 +251,20 @@ const Header = () => {
           </Link>
           <FaArrowRight className="icon-item" onClick={handleMenu} />
         </div>
+        <div className="flex absolute  top-16 right-4  h-auto w-auto justify-between transform ">
+          <p className=" inline text-sky-700 text-xl"> {greetings}-🙌🏼 </p>
+          <strong className=" inline text-sky-600 text-2xl"> {time}</strong>
+        </div>
         {/* 
         <div className="contact-me-mobile">
         
         </div> */}
       </header>
 
-      <section className="px-24 max-md:px-16 max-sm:px-7 bg-black text-slate-400" id="head">
+      <section
+        className="px-24 py-5 max-md:px-16 max-sm:px-7 bg-black text-slate-400"
+        id="head"
+      >
         <h1 style={{ fontSize: "2rem" }}>Hey, welcome!</h1>
         <p> My name is, </p>
 
@@ -261,15 +293,15 @@ const Header = () => {
         </strong>
 
         <div className="grid grid-cols-2 gap-1 max-sm:grid-cols-2 max-sm:gap-1 py-1">
-          <div className="border border-slate-200 w-50 text-white flex justify-between px-60  items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-200 w-45 text-white flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2  max-sm:rounded-sm max-md:px-3">
             <img src={javascriptlogo} width={"30px"} height={"30px"} />
             <strong>Javascript</strong>
           </div>
-          <div className="border border-slate-200 w-50 text-white flex justify-between px-60  items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-200 w-45 text-white flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={reactLogo} width={"30px"} height={"30px"} />
             <strong> React </strong>
           </div>
-          <div className="border border-slate-200 w-50 text-white flex justify-between  px-60 items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-200 w-45 text-white flex justify-between  px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img
               src={expressLogo}
               width={"120px"}
@@ -279,22 +311,22 @@ const Header = () => {
             <strong>express</strong>
           </div>
 
-          <div className="border border-slate-200 w-50 text-white flex justify-between px-60 items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-200 w-45 text-white flex justify-between px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={javascriptlogo} width={"30px"} height={"30px"} />
             <strong> Node</strong>
           </div>
 
-          <div className="border border-slate-200 w-50 text-white flex justify-between px-60  items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-200 w-45 text-white flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={mongoDb} width={"30px"} height={"30px"} />
             <strong> MongoDb</strong>
           </div>
-          <div className="border border-slate-200 w-50 text-white flex justify-between px-60  items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-200 w-45 text-white flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={mysql} width={"30px"} height={"30px"} />
             <strong> Mysql</strong>
           </div>
-          <div className="border border-slate-200 w-50 text-white flex justify-between px-60 items-center max-sm:px-1 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-1">
+          <div className="border border-slate-200 w-45 text-white flex justify-between px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={git} width={"70px"} height={"30px"} />
-            <strong> Version control</strong>
+            <strong>Git</strong>
           </div>
         </div>
       </section>
