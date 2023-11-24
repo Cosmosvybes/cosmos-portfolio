@@ -95,31 +95,45 @@ const Projects = () => {
         id="project"
         className=" bg-black px-24 text-white py-4 max-sm:flex justify-center items-center flex-col  max-sm:px-4 text-sm max-md:px-16"
       >
-        <h1> Projects</h1>
-        <p className="inline">
+        <h1 className="text-slate-400 text-2xl"> Projects</h1>
+        <p className="inline text-slate-400 text-bold">
           {" "}
           Here are some of my favourite projects and APIs{" "}
         </p>
-        <div className="btns">
-          <button onClick={() => filterByCategory("all")}> All</button>
-          <button onClick={() => filterByCategory("frontend")}>
+        <div className="btns ">
+          <button
+            className="rounded-sm"
+            onClick={() => filterByCategory("all")}
+          >
+            {" "}
+            All
+          </button>
+          <button
+            className="rounded-sm"
+            onClick={() => filterByCategory("frontend")}
+          >
             Front End
           </button>
-          <button onClick={() => filterByCategory("backend")}>Back End</button>
+          <button
+            className="rounded-sm"
+            onClick={() => filterByCategory("backend")}
+          >
+            Back End
+          </button>
         </div>
 
-        <div className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
+        <div className="grid grid-cols-3 max-md:grid-cols-2 gap-2 max-sm:grid-cols-1">
           {categoryFiltered.length < 1
             ? projects.map((project) => (
                 <div
-                  className="detail h-auto w-95 max-md:w-auto border border-slate-900 flex justify-evenly flex-col items-start
+                  className="detail h-auto w-95 max-md:w-auto border border-slate-800 flex justify-evenly flex-col items-start
                    px-1 max-sm:w-auto  hover:bg-slate-300 hover:text-slate-900 trasition duration-500"
                   key={project.id}
                 >
-                  <div className="text h-auto border border-slate-200 py-2 px-2 rounded-sm max-sm:rounded-sm">
+                  <div className="text h-auto border border-slate-800 py-2 px-2 rounded-sm max-sm:rounded-sm">
                     <img src={project.img} />
                     <div className="description flex justify-start">
-                      <div className="h-44 border  border-slate-500 flex flex-col items-center justify-center  ">
+                      <div className="h-44 border  border-slate-800 flex flex-col items-center justify-center  ">
                         <h4 className="text-slate-700 text-2xl hover:text-slate-900">
                           {" "}
                           {project.title}
@@ -131,7 +145,7 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  <div className="links-url flex justify-around items-center h-12  border border-slate-300 w-full">
+                  <div className="links-url flex justify-around items-center h-12  border border-slate-800  w-full">
                     <FaGithub
                       onClick={() => window.open(project.repository)}
                       className="hover:text-slate-600 transition duration-150 text-slate-500"
@@ -147,21 +161,21 @@ const Projects = () => {
               ))
             : categoryFiltered.map((project) => (
                 <div
-                  className="detail h-auto w-auto border border-slate-900
+                  className="detail h-auto w-auto border border-slate-800
                   flex justify-between hover:text-slate-900 rounded-sm max-sm:rounded-md flex-col items-center px-1  max-sm:w-auto hover:bg-slate-300 trasition duration-500"
                   key={project.id}
                 >
-                  <div className="text h-auto border border-slate-200  px-0 py-0 rounded-md max-sm:rounded-sm">
+                  <div className="text h-auto border border-slate-800  px-0 py-0 rounded-md max-sm:rounded-sm">
                     <img src={project.img} />
                   </div>
-                  <div className="description h-52 border flex flex-col items-center justify-center border-slate-500">
+                  <div className="description h-52 border flex flex-col items-center justify-center border-slate-800">
                     <h4 className="text-slate-500 hover:text-slate-900">
                       {" "}
                       {project.title}
                     </h4>
                     <p className="hover:text-slate-900">{project.descripton}</p>
                   </div>
-                  <div className="links-url flex justify-around items-center h-12  border border-slate-300 w-full">
+                  <div className="links-url flex justify-around items-center h-12  border border-slate-800  w-full">
                     <FaGithub
                       onClick={() => window.open(project.repository)}
                       className="hover:text-slate-600 transition duration-150 text-slate-500"

@@ -76,11 +76,11 @@ const Header = () => {
   const readTime = () => {
     let hours = new Date().getHours();
     if (hours >= 16) {
-      setGreetings("Good evening");
+      setGreetings("Good evening 🌙 - ");
     } else if (hours > 12) {
-      setGreetings("Good Afternoon");
+      setGreetings("Good afternoon ☀ -");
     } else {
-      setGreetings("Good Morning");
+      setGreetings("Good morning 🎈 -");
     }
     setInterval(() => {
       setTime(
@@ -183,8 +183,8 @@ const Header = () => {
           )}
         </div>
 
-        <div className="absolute left-80 top-5 w-92 border border-slate-300 h-38 flex justify-between flex-reverse items-center transform ">
-          <p className=" text-black text-5xl block">{greetings}👋🏼</p>
+        <div className="absolute left-48 max-md:top-0 top-5 w-92 border border-slate-300 h-38 flex justify-between flex-reverse items-center transform ">
+          <p className=" text-black text-5xl block max-md:text-2xl">{greetings}</p>
           <strong className=" text-black block ">{time}</strong>
         </div>
       </header>
@@ -252,7 +252,7 @@ const Header = () => {
           <FaArrowRight className="icon-item" onClick={handleMenu} />
         </div>
         <div className="flex absolute  top-16 right-4  h-auto w-auto justify-between transform ">
-          <p className=" inline text-sky-700 text-xl"> {greetings}-🙌🏼 </p>
+          <p className=" inline text-sky-700 text-xl"> {greetings} </p>
           <strong className=" inline text-sky-600 text-2xl"> {time}</strong>
         </div>
         {/* 
@@ -274,7 +274,7 @@ const Header = () => {
         <p>
           {" "}
           I am a{" "}
-          <span style={{ color: "white", fontWeight: "bolder" }}>
+          <span style={{ color: "lightgrey", fontWeight: "bolder" }}>
             web developer
           </span>{" "}
           based in nigeria, skilled at crafting websites and web APIs, using
@@ -287,21 +287,21 @@ const Header = () => {
           commercial experience in this era , with a keen interest to expand my
           skillset in a diverse range of technologies!
         </p>
-        <strong style={{ color: "white", fontSize: "1rem" }}>
+        <strong style={{ color: "lightgrey", fontSize: "1rem" }}>
           {" "}
           I am open to oppotunities in Nigeria, international or remote gigs!
         </strong>
 
         <div className="grid grid-cols-2 gap-1 max-sm:grid-cols-2 max-sm:gap-1 py-1">
-          <div className="border border-slate-200 w-45 text-white flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2  max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-800 w-45 text-slate-600 flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2  max-sm:rounded-sm max-md:px-3">
             <img src={javascriptlogo} width={"30px"} height={"30px"} />
             <strong>Javascript</strong>
           </div>
-          <div className="border border-slate-200 w-45 text-white flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-800 w-45 text-slate-600 flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={reactLogo} width={"30px"} height={"30px"} />
             <strong> React </strong>
           </div>
-          <div className="border border-slate-200 w-45 text-white flex justify-between  px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-800 w-45 text-slate-600 flex justify-between  px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img
               src={expressLogo}
               width={"120px"}
@@ -311,20 +311,20 @@ const Header = () => {
             <strong>express</strong>
           </div>
 
-          <div className="border border-slate-200 w-45 text-white flex justify-between px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-800 w-45 text-slate-600 flex justify-between px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={javascriptlogo} width={"30px"} height={"30px"} />
             <strong> Node</strong>
           </div>
 
-          <div className="border border-slate-200 w-45 text-white flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-800 w-45 text-slate-600 flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={mongoDb} width={"30px"} height={"30px"} />
             <strong> MongoDb</strong>
           </div>
-          <div className="border border-slate-200 w-45 text-white flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-800 w-45 text-slate-600 flex justify-between px-1  items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={mysql} width={"30px"} height={"30px"} />
             <strong> Mysql</strong>
           </div>
-          <div className="border border-slate-200 w-45 text-white flex justify-between px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
+          <div className="border border-slate-800 w-45 text-slate-600 flex justify-between px-1 items-center max-sm:px-2 max-sm:w-auto py-2 max-sm:rounded-sm max-md:px-3">
             <img src={git} width={"70px"} height={"30px"} />
             <strong>Git</strong>
           </div>
