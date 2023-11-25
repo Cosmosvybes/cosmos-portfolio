@@ -126,19 +126,19 @@ const Projects = () => {
           {categoryFiltered.length < 1
             ? projects.map((project) => (
                 <div
-                  className="detail h-auto w-95 max-md:w-auto border border-slate-800 flex justify-evenly flex-col items-start
-                   px-1 max-sm:w-auto  hover:bg-slate-300 hover:text-slate-900 trasition duration-500"
+                  className="detail h-auto w-95 max-md:w-auto border border-slate-800 shadow shadow-slate-500 flex justify-evenly flex-col items-start
+                   px-1 max-sm:w-auto py-2 hover:bg-slate-300 hover:text-slate-900 trasition duration-500"
                   key={project.id}
                 >
-                  <div className="text h-auto border border-slate-800 py-2 px-2 rounded-sm max-sm:rounded-sm">
+                  <div className="text h-auto border border-slate-800 py-2 px-2 rounded-0 max-sm:rounded-sm">
                     <img src={project.img} />
                     <div className="description flex justify-start">
-                      <div className="h-44 border  border-slate-800 flex flex-col items-center justify-center  ">
+                      <div className="h-44 border  border-slate-800 shadow shadow-slate-500 flex flex-col items-center justify-center  ">
                         <h4 className="text-slate-700 text-2xl hover:text-slate-900">
                           {" "}
                           {project.title}
                         </h4>
-                        <p className="text-slate-500 hover:text-slate-900">
+                        <p className="text-slate-500 hover:text-slate-900 px-2">
                           {project.descripton}
                         </p>
                       </div>

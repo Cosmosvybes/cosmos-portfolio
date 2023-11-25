@@ -76,12 +76,14 @@ const Header = () => {
   const readTime = () => {
     let hours = new Date().getHours();
     if (hours >= 16) {
-      setGreetings("Good evening 🌙 - ");
-    } else if (hours > 12) {
-      setGreetings("Good afternoon ☀ -");
-    } else {
-      setGreetings("Good morning 🎈 -");
+      setGreetings("🌙 Good evening");
+    } else if (hours >= 12) {
+      setGreetings("☀ Good afternoon");
     }
+    else {
+      setGreetings("🎈 Good morning")
+    }
+
     setInterval(() => {
       setTime(
         new Date().toLocaleTimeString("en-US", {
@@ -184,8 +186,10 @@ const Header = () => {
         </div>
 
         <div className="absolute left-48 max-md:top-0 top-5 w-92 border border-slate-300 h-38 flex justify-between flex-reverse items-center transform ">
-          <p className=" text-black text-5xl block max-md:text-2xl">{greetings}</p>
-          <strong className=" text-black block ">{time}</strong>
+          <p className=" text-black text-5xl block max-md:text-2xl">
+            {greetings}
+          </p>
+          {/* <strong className=" text-black block ">{time}</strong> */}
         </div>
       </header>
       <header className="header tab">
@@ -253,7 +257,7 @@ const Header = () => {
         </div>
         <div className="flex absolute  top-16 right-4  h-auto w-auto justify-between transform ">
           <p className=" inline text-sky-700 text-xl"> {greetings} </p>
-          <strong className=" inline text-sky-600 text-2xl"> {time}</strong>
+          {/* <strong className=" inline text-sky-600 text-2xl"> {time}</strong> */}
         </div>
         {/* 
         <div className="contact-me-mobile">
